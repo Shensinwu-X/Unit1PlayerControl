@@ -1,8 +1,10 @@
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
+    
 {
     public float Speed = 5.0f;
+    public float TurnSpeed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,5 +16,6 @@ public class PlayerController : MonoBehaviour
     {
         // Make Car Go Vrooooom neeeeoooooom vvvvvrrrrrr 
         transform.Translate(Vector3.forward * Time.deltaTime * Speed);
+        transform.Translate(Vector3.right * Time.deltaTime * TurnSpeed);
     }
 }
